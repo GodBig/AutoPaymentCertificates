@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="For making payment certificate in CSCECME">
+    <meta name="author" content="Cai ZhenZhi">
+    <title>CSCECME Payment Certificate</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+    <!-- Custom styles for this template -->
+    <link href="https://getbootstrap.com/docs/5.1/examples/checkout/form-validation.css" rel="stylesheet">
+
+</head>
+<body class="bg-light">
+
+<div class="container">
+    <main>
+        <div class="py-5 text-center">
+            <img class="d-block mx-auto mb-4"
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/China_State_Construction_Engineering_Corporation_logo.svg/1024px-China_State_Construction_Engineering_Corporation_logo.svg.png"
+                 alt="" width="72" height="57">
+            <h2>Payment Certificates Form</h2>
+            <p class="lead">For making payment certificates fast, I made this program. Using this you will get the
+                filled Excel files.</p>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-md-5 col-lg-4 order-md-last">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Your step</span>
+                    <span class="badge bg-primary rounded-pill">3</span>
+                </h4>
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Make LPO excel and sign in LPO</h6>
+                            <small class="text-muted">the point is list of items can't be more than 14 rows,and sign in LPO on OA system and supplier</small>
+                        </div>
+                        <span class="text-muted">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Get tax invoice</h6>
+                            <small class="text-muted">get and scan tax invoice into pdf files</small>
+                        </div>
+                        <span class="text-muted">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Use this program</h6>
+                            <small>Get the filled payment certificate</small>
+                        </div>
+                        <span class="text-success">3</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Uploading contract</h6>
+                            <small class="text-muted">Fill Other Expenditure Business Contract Application on SAP system</small>
+                        </div>
+                        <span class="text-muted">4</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Put merged pdf into folder</h6>
+                            <small class="text-muted">Put merged pdf into:\Shared\HQ\13 IT\2-IT Procurement\5.Payment\3.Payment</small>
+                        </div>
+                        <span class="text-muted">5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Update payment_log.xlsx</h6>
+                            <small class="text-muted">Add a new line with pre_payment_log.xlsx</small>
+                        </div>
+                        <span class="text-muted">6</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Print the printing_excel.xlsx</h6>
+                            <small class="text-muted">Print this excel and let the manager sign in these</small>
+                        </div>
+                        <span class="text-muted">7</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Upload payment to SAP</h6>
+                            <small class="text-muted">Fill Application for payment of external costs and expenses on SAP system</small>
+                        </div>
+                        <span class="text-muted">8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">make sure the date of payment</h6>
+                            <small class="text-muted">Ask treasury department for the date of payment</small>
+                        </div>
+                        <span class="text-muted">9</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between lh-sm">
+                        <div>
+                            <h6 class="my-0">Approved by cheque maker</h6>
+                            <small class="text-muted">Send the cheque email to supplier</small>
+                        </div>
+                        <span class="text-muted">10</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h4 class="mb-3">Upload information</h4>
+                <form class="needs-validation" action="/input" method="post" enctype="multipart/form-data" novalidate>
+                    <div class="col-12">
+                        <label for="address" class="form-label">TAX INVOICE</label>
+                        <input type="text" class="form-control" name="invoice_code" placeholder="e.g.CS204637" required>
+                        <div class="invalid-feedback">
+                            Please enter tax invoice code.
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <label for="lpo_xlsx" class="form-label">Upload excel of LPO</label>
+                        <input type="file" class="form-control" name="lpo_xlsx" accept=".xlsx"/>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <label for="lpo_pdf" class="form-label">Upload pdf of LPO</label>
+                        <input type="file" class="form-control" name="lpo_pdf" accept=".pdf"/>
+                    </div>
+                    <br>
+                    <div class="col-12">
+                        <label for="tax_invoice" class="form-label">Upload tax invoice</label>
+                        <input type="file" class="form-control" name="tax_invoice" accept=".pdf"/>
+                    </div>
+
+                    <hr class="my-4">
+
+                    <button class="w-100 btn btn-primary btn-lg" type="submit">Generate payment certificates</button>
+                    {% raw xsrf_form_html() %}
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+        <p class="mb-1">&copy; 2023–2024 China State Construction Engineering Corporation Middle East</p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer>
+</div>
+
+</body>
+</html>
